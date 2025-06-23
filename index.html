@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task Management App </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Task Management App</h1>
+    <input type="text" id="taskName" placeholder="Task Name"/>
+    <input type="text" id="taskCat" placeholder="Category"/>
+    <input type="text" id="taskDeadline" placeholder="Deadline"/>
+    <input type="text" id="taskStatus" placeholder="Status"/><br>
+    <button onclick="addNewTask()">Add New Task</button>
+    
+    <button onclick="displayTaskList()">Display List</button>
+    <br>
+    <input type="text" id="searchInput" placeholder="Category"/>
+    <button onclick="fliterTaskByCategory()">Filter By Category</button>
+    <br>
+    <input type="text" id="searchTaskName" placeholder="TaskName"/>
+    <button onclick="fliterTaskByName()">Filter By Task Name</button>
+    <p id="successMsg"></p>
+    <br>
+    <table id="taskTable" style="border-style:dashed; margin-left: 330px;" >
+    <thead>
+        <tr>
+            <th style="width: 150px;">Task Name</th>
+            <th style="width: 150px;">Category</th>
+            <th style="width: 150px;">Due Date</th>
+            <th style="width: 150px;">Status</th>
+        </tr>
+    </thead>
+    <tbody id="tbBody"> </tbody>
+    </table>
+    
+    <script src="index.js"></script>
+</body>
+</html>
