@@ -15,61 +15,51 @@ function addNewTask(){
 }
 
 function displayTaskList() {
-    const tBody = document.getElementById("tbBody");
-    tBody.innerHTML = "";
-    for (let task of taskList) {
-        const row = document.createElement("tr");
+    const resultTaskList = document.getElementById("taskResult");
+    resultTaskList.innerHTML = "";
+    for (let i = 0; i < taskList.length; i++) {
+        const createNewRow = document.createElement("tr");
         for (let key of ["tName", "tCat", "tDeadline", "tStatus"]) {
-            const rowCell = document.createElement("td");
-            rowCell.textContent = task[key];
-            row.appendChild(rowCell);
-        }
-    tBody.appendChild(row);
+            const createCol = document.createElement("td");
+            createCol.textContent = taskList[i][key];
+            createNewRow.appendChild(createCol);
+        }        
+        resultTaskList.appendChild(createNewRow);
     }
 }
+
 function fliterTaskByCategory(){
     const searchItem = document.getElementById("searchInput").value;
-    const tBody = document.getElementById("tbBody");
-    tBody.innerHTML = "";
-    let i = 0;
-    for (let task of taskList) {
+    const resultTaskList = document.getElementById("taskResult");
+    resultTaskList.innerHTML = "";
+    for (let i = 0; i < taskList.length; i++) {
         let tCatName = taskList[i].tCat;
          if(tCatName.includes(searchItem)){
-            const row = document.createElement("tr");
+            const createNewRow = document.createElement("tr");
             for (let key of ["tName", "tCat", "tDeadline", "tStatus"]) {
-                const rowCell = document.createElement("td");
-                rowCell.textContent = task[key];
-                row.appendChild(rowCell);
+                const createCol = document.createElement("td");
+                createCol.textContent = taskList[i][key];
+                createNewRow.appendChild(createCol);
             }
-            tBody.appendChild(row);
+            resultTaskList.appendChild(createNewRow);
          }
-         i++;
     }
 }
 
 function fliterTaskByName(){
-    const searchItem = document.getElementById("searchInput").value;
-    const tBody = document.getElementById("tbBody");
-    tBody.innerHTML = "";
-    let i = 0;
-    for (let task of taskList) {
+    const searchItem = document.getElementById("searchTaskName").value;
+    const resultTaskList = document.getElementById("taskResult");
+    resultTaskList.innerHTML = "";
+    for (let i = 0; i < taskList.length; i++) {
         let tTaskName = taskList[i].tName;
-         if(tTaskName.includes(searchItem)){
-            const row = document.createElement("tr");
+        if(tTaskName.includes(searchItem)){
+            const createNewRow = document.createElement("tr");
             for (let key of ["tName", "tCat", "tDeadline", "tStatus"]) {
-                const rowCell = document.createElement("td");
-                rowCell.textContent = task[key];
-                row.appendChild(rowCell);
+                const createCol = document.createElement("td");
+                createCol.textContent = taskList[i][key];
+                createNewRow.appendChild(createCol);
             }
-            tBody.appendChild(row);
-         }
-         i++;
+             resultTaskList.appendChild(createNewRow);
+        }
     }
 }
-
-
-
-
-
-
-
