@@ -32,13 +32,10 @@ Users should be able to:
 With this assignment, 
 - Learned how to add task in objects with keys and create array with objects.
 - Create dynamic html tags using Javascripts
-- Identify nearest elements using closest concept and perform action on this elements such as updating the value, removing item etc
-- Learned how to call the functions to update the amount at runtime
 - Using custom logic, filtered the item and display in the list
 
 ### Challenges
-- Use inner loops to display the items in the list
+- Use inner loops to display the items in the list using key
 - Use innerhtml tags in javascript to create dynamic list and pass it to HTML
-- Use closest concept to identify nearest items and perform actions
 - Had to refer some forums online like stackoverflow site to understand the key concept
 
